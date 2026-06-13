@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>NEXUS · WAR CODEX V2.5 | Premium Clan Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: radial-gradient(ellipse at 30% 20%, #0B0F1A, #02040C); scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0F172A; }
+        ::-webkit-scrollbar-thumb { background: #F97316; border-radius: 10px; }
+        .glass-card { background: rgba(15, 25, 35, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(249, 115, 22, 0.25); box-shadow: 0 20px 35px -15px rgba(0,0,0,0.6); }
+        .glass-panel { background: rgba(10, 18, 28, 0.75); backdrop-filter: blur(8px); border: 1px solid rgba(249, 115, 22, 0.3); }
+        @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fade-up { animation: fadeSlideUp 0.5s ease-out forwards; }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body class="text-gray-200 antialiased">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 relative z-10">
+        
+        <!-- HERO SECTION -->
+        <div class="glass-card rounded-3xl p-6 md:p-8 mb-12 text-center transition-all duration-500 hover:border-orange-500/50">
+            <div class="flex flex-col items-center gap-3">
+                <div class="inline-flex items-center gap-3 bg-orange-600/20 backdrop-blur-sm px-5 py-2 rounded-full border border-orange-500/40">
+                    <i class="fas fa-skull-crossbones text-orange-400 text-xl"></i>
+                    <span class="font-bold tracking-wider text-orange-200">NEXUS CLAN</span>
+                    <i class="fas fa-fist-raised text-orange-400 text-xl"></i>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-white via-orange-200 to-amber-400 bg-clip-text text-transparent tracking-tight mt-3">
+                    WAR CODEX 
+                    <span class="text-2xl md:text-3xl align-middle bg-orange-500 text-black px-2 py-0.5 rounded-full text-sm font-bold ml-2 inline-block">V2.5</span>
+                </h1>
+                <div class="flex flex-wrap gap-3 justify-center mt-1">
+                    <span class="bg-black/40 text-orange-300 text-xs font-semibold px-3 py-1 rounded-full border border-orange-500/40"><i class="fas fa-gem mr-1"></i> DONATION GLORY</span>
+                    <span class="bg-black/40 text-amber-300 text-xs px-3 py-1 rounded-full"><i class="far fa-calendar-alt mr-1"></i> Updated 1 June 2026</span>
+                </div>
+                <p class="text-gray-300 text-sm max-w-2xl mt-3">claim · hit · clean · donate to rise — zero excuses, absolute discipline.</p>
+                <button id="enterBattleBtn" class="mt-5 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-orange-700/30 flex items-center gap-3 text-lg"><i class="fas fa-dice-d6 text-xl"></i> ENTER THE BATTLEFIELD <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- RULES GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mb-12">
+            <!-- Attack Directive -->
+            <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/60 animate-fade-up">
+                <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-xl bg-orange-500/20 flex items-center justify-center text-orange-400"><i class="fas fa-bullseye text-xl"></i></div><h2 class="text-xl font-bold tracking-tight">Attack Directive</h2></div>
+                <ul class="space-y-2.5 text-gray-300 text-sm">
+                    <li class="flex items-start gap-2"><i class="fas fa-check-circle text-emerald-400 mt-0.5 text-sm"></i><span>Use <span class="font-semibold text-orange-300">both attacks</span> — zero wasted</span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-star-of-life text-amber-400 mt-0.5 text-sm"></i><span>First attack: mirror <span class="font-semibold text-orange-300">or any base you can 3-star</span></span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-broom text-cyan-400 mt-0.5 text-sm"></i><span>Second attack: clean bases without 3 stars</span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-ban text-red-400 mt-0.5 text-sm"></i><span>No leftover attacks = accountability</span></li>
+                </ul>
+            </div>
+            <!-- Timer Rule -->
+            <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 animate-fade-up delay-100">
+                <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-xl bg-red-500/20 flex items-center justify-center text-red-400"><i class="fas fa-hourglass-half text-xl"></i></div><h2 class="text-xl font-bold tracking-tight">Timer Rule <span class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full ml-2 align-middle">NEW</span></h2></div>
+                <ul class="space-y-2.5 text-gray-300 text-sm">
+                    <li class="flex items-start gap-2"><i class="fas fa-clock text-yellow-400 mt-0.5"></i><span><strong>Use second attack on bases without 3 stars</strong></span></li>
+                    <li class="bg-red-950/40 border-l-4 border-red-500 p-2 rounded-lg text-xs"><i class="fas fa-exclamation-triangle text-red-400 mr-1"></i> WHEN? When battle time reaches <strong class="text-red-300">1 HOUR REMAINING</strong> → prioritize non-3-star bases.</li>
+                    <li class="flex items-start gap-2"><i class="fas fa-brush text-orange-300"></i><span>Clean early, secure stars — don't wait last minute.</span></li>
+                </ul>
+            </div>
+            <!-- Attack Swap Rule -->
+            <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 animate-fade-up delay-200">
+                <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400"><i class="fas fa-exchange-alt text-xl"></i></div><h2 class="text-xl font-bold tracking-tight">Swap Protocol <span class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full ml-2">NEW</span></h2></div>
+                <ul class="space-y-2.5 text-gray-300 text-sm">
+                    <li class="flex items-start gap-2"><i class="fas fa-comment-dots text-sky-400"></i><span>Swap target? <strong class="text-orange-200">ASK PERMISSION FIRST</strong></span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-flag-checkered text-green-400"></i><span>Ask the flag placer or original attacker</span></li>
+                    <li class="bg-purple-950/30 border-l-4 border-purple-500 p-2 rounded-lg text-xs"><i class="fas fa-shield-alt text-purple-300"></i> NO PERMISSION = NO SWAP. Violation = penalty.</li>
+                    <li class="flex items-start gap-2"><i class="fab fa-discord text-indigo-400"></i><span>Always communicate in clan chat / Discord.</span></li>
+                </ul>
+            </div>
+            <!-- Claim Target -->
+            <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 animate-fade-up">
+                <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-xl bg-rose-500/20 flex items-center justify-center text-rose-400"><i class="fas fa-flag text-xl"></i></div><h2 class="text-xl font-bold tracking-tight">Claim Target</h2></div>
+                <ul class="space-y-2.5 text-gray-300 text-sm">
+                    <li class="flex items-start gap-2"><i class="fas fa-circle text-red-500 text-xs mt-1.5"></i><span>Plant <span class="font-bold text-red-400">Red Flag</span> on your target first</span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-hand-peace text-amber-400"></i><span>Never attack a claimed base (unless it's yours)</span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-skull text-red-500"></i><span>Stealing claims = <span class="text-red-300 font-bold">severe penalty</span></span></li>
+                </ul>
+            </div>
+            <!-- Heroes & Commitment -->
+            <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 animate-fade-up delay-100">
+                <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-xl bg-teal-500/20 flex items-center justify-center text-teal-400"><i class="fas fa-helmet-battle text-xl"></i></div><h2 class="text-xl font-bold tracking-tight">Heroes & Commitment</h2></div>
+                <ul class="space-y-2.5 text-gray-300 text-sm">
+                    <li class="flex items-start gap-2"><i class="fas fa-bed text-blue-300"></i><span>Heroes asleep? → <span class="bg-amber-600/40 px-1.5 rounded font-bold">OPT OUT</span></span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-crosshairs text-orange-400"></i><span>Signed up = MUST attack. No-show = penalty</span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-hourglass-start text-gray-400"></i><span>If you can't attack, opt out BEFORE war starts</span></li>
+                </ul>
+            </div>
+            <!-- Season Donation Glory -->
+            <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 border-t-2 border-amber-500 animate-fade-up delay-200">
+                <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center text-amber-400"><i class="fas fa-gift text-xl"></i></div><h2 class="text-xl font-bold tracking-tight">SEASON DONATION GLORY <span class="bg-amber-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">PROMO</span></h2></div>
+                <ul class="space-y-2.5 text-gray-300 text-sm">
+                    <li class="flex items-start gap-2"><i class="fas fa-trophy text-yellow-400"></i><span>Member with <span class="font-bold text-amber-300">HIGHEST DONATED TROOPS</span> earns promotion</span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-chart-line text-green-400"></i><span><strong>No minimum requirement.</strong> Highest donor wins.</span></li>
+                    <li class="bg-amber-950/30 border-l-4 border-amber-500 p-2 rounded-lg text-xs"><i class="fas fa-crown text-amber-400"></i> <span><strong>If Co-Leader is top donor:</strong> next eligible Elder (highest donations) promoted to Co-Leader.</span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-hand-holding-heart text-pink-400"></i><span>Promotion takes effect at <strong>start of next season</strong>.</span></li>
+                </ul>
+            </div>
+            <!-- Respect & Discipline -->
+            <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 animate-fade-up">
+                <div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center text-indigo-400"><i class="fas fa-gavel text-xl"></i></div><h2 class="text-xl font-bold tracking-tight">Discipline & Respect</h2></div>
+                <ul class="space-y-2.5 text-gray-300 text-sm">
+                    <li class="flex items-start gap-2"><i class="fas fa-users text-blue-400"></i><span>No special treatment — universal rules</span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-clock text-gray-400"></i><span>Inactive for <strong>1 month</strong> = auto‑kick</span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-repeat text-red-400"></i><span>Repeat offender? "Paulit‑ulit pasaway? Paalam."</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PENALTY SYSTEM -->
+        <div class="glass-panel rounded-3xl p-6 md:p-8 mb-12 animate-fade-up delay-300">
+            <div class="flex flex-wrap items-center gap-3 mb-6 border-b border-orange-500/30 pb-3"><i class="fas fa-balance-scale text-2xl text-orange-400"></i><h2 class="text-2xl font-bold tracking-tight">Penalty System · Zero Tolerance</h2></div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                <div class="bg-black/40 rounded-xl p-5 text-center border-t-4 border-orange-500"><i class="fas fa-crown text-yellow-500 text-2xl mb-2 block"></i><h3 class="text-xl font-bold">Co-Leader</h3><div class="mt-3 space-y-2 text-sm"><span class="block bg-gray-800/60 p-1.5 rounded">⚠️ 1st warning → demote to elder</span><span class="block bg-gray-800/60 p-1.5 rounded">⚠️ 2nd warning → demote to member</span><span class="block bg-red-900/40 p-1.5 rounded">❌ 3rd warning → KICKED</span></div></div>
+                <div class="bg-black/40 rounded-xl p-5 text-center border-t-4 border-amber-500"><i class="fas fa-feather-alt text-amber-400 text-2xl mb-2 block"></i><h3 class="text-xl font-bold">Elder</h3><div class="mt-3 space-y-2 text-sm"><span class="block bg-gray-800/60 p-1.5 rounded">⚠️ 1st warning → demote to member</span><span class="block bg-red-900/40 p-1.5 rounded">❌ 2nd warning → KICKED</span></div></div>
+                <div class="bg-black/40 rounded-xl p-5 text-center border-t-4 border-slate-500"><i class="fas fa-shield-alt text-slate-300 text-2xl mb-2 block"></i><h3 class="text-xl font-bold">Member</h3><div class="mt-3 space-y-2 text-sm"><span class="block bg-gray-800/60 p-1.5 rounded">📋 1st warning → bench / warning</span><span class="block bg-red-900/40 p-1.5 rounded">❌ 2nd warning → KICKED</span></div></div>
+            </div>
+            <div class="mt-5 text-center text-xs bg-black/30 rounded-xl p-3"><i class="fas fa-gavel mr-1"></i> Repeated violations = no special treatment · Demotion is permanent unless re-earned.</div>
+        </div>
+
+        <!-- BIBLE VERSE CARD (NOW WORKING VIA PROXY) -->
+        <div class="glass-card rounded-2xl p-6 mb-12 transition-all animate-fade-up" id="bibleVerseSection">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
+                <div class="flex gap-2 items-center"><i class="fas fa-bible text-2xl text-amber-400"></i><h3 class="text-xl font-bold tracking-wide">Verse of the Day</h3></div>
+                <button id="refreshBibleBtn" class="text-xs bg-gray-800 hover:bg-orange-700 px-4 py-2 rounded-full transition flex items-center gap-1"><i class="fas fa-sync-alt"></i> Refresh Verse</button>
+            </div>
+            <div id="bibleContent" class="min-h-[160px] flex flex-col items-center justify-center text-center p-4">
+                <div class="flex flex-col items-center gap-3"><i class="fas fa-spinner fa-pulse text-3xl text-orange-400"></i><p class="text-gray-400">Loading sacred scrolls...</p></div>
+            </div>
+        </div>
+
+        <!-- QUOTE SECTION -->
+        <div class="bg-gradient-to-r from-orange-900/30 via-black/50 to-amber-900/30 rounded-2xl p-6 text-center border border-orange-500/40 backdrop-blur-sm my-8">
+            <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base font-medium">
+                <span class="bg-orange-500/10 px-3 py-1 rounded-full"><i class="fas fa-fist-raised text-orange-400 mr-1"></i> Claim · Hit · Clean</span>
+                <span class="bg-red-500/10 px-3 py-1 rounded-full"><i class="fas fa-hourglass-end text-red-400 mr-1"></i> 1h left → clean non-3-star</span>
+                <span class="bg-purple-500/10 px-3 py-1 rounded-full"><i class="fas fa-handshake text-purple-300 mr-1"></i> Swap = Ask Permission</span>
+                <span class="bg-emerald-500/10 px-3 py-1 rounded-full"><i class="fas fa-gem text-emerald-300 mr-1"></i> Highest donor gets promotion</span>
+            </div>
+            <p class="text-gray-400 text-xs mt-4">No heroes? opt out. no excuses. fight as one. donate to rise!</p>
+        </div>
+
+        <div class="text-center text-gray-500 text-xs border-t border-gray-800 pt-6 mt-4">
+            <i class="fas fa-code-branch"></i> NEXUS · War Codex v2.5 — Donation Glory Edition · Developed by JL DEV<br>
+            Timer rule strictly enforced. Attack swap requires permission. Seasonal Donation: highest donor promoted (co-leader exception applied)
+        </div>
+    </div>
+
+    <!-- NOW PLAYING INDICATOR -->
+    <div class="fixed bottom-4 left-4 bg-black/70 backdrop-blur-md text-orange-300 text-xs py-1.5 px-3 rounded-full z-50 flex items-center gap-2 border border-orange-500/40"><i class="fas fa-music"></i> <span id="nowPlaying">waiting...</span></div>
+
+    <!-- WELCOME MODAL -->
+    <div id="welcomeModal" class="fixed inset-0 bg-black/95 backdrop-blur-xl z-[3000] flex items-center justify-center transition-all duration-500 opacity-100 visible">
+        <div class="max-w-lg w-full mx-4 bg-gradient-to-br from-gray-900 to-gray-950 rounded-3xl border-2 border-amber-500 shadow-2xl overflow-hidden">
+            <div class="bg-gradient-to-r from-amber-500 to-orange-600 p-5 text-center"><h2 class="text-2xl font-bold flex items-center justify-center gap-3 text-black"><i class="fas fa-skull-crossbones"></i> NEXUS WAR COUNCIL <i class="fas fa-crown"></i></h2></div>
+            <div class="p-6 text-center"><i class="fas fa-dragon text-5xl text-amber-400 mb-3"></i><p class="text-gray-200 font-semibold text-xl">Glory & Generosity Await!</p><p class="text-gray-400 text-sm mt-2">You enter with honor, discipline and donation spirit.</p>
+            <div class="bg-orange-950/30 p-4 rounded-xl mt-3 text-left text-sm"><p class="font-bold text-orange-300"><i class="fas fa-gift mr-1"></i> SEASON DONATION PROMOTION</p><p>✓ Highest donor each season → Co-Leader (no minimum)<br>✓ If Co-Leader is top donor → next highest Elder promoted</p><p>✓ Both attacks mandatory, Heroes = opt out, Red flag respected.</p></div>
+            <button id="welcomeConfirmBtn" class="mt-5 w-full bg-orange-600 hover:bg-orange-500 py-3 rounded-full font-bold text-white transition"><i class="fas fa-check-double mr-1"></i> I UNDERSTAND · PROCEED</button></div>
+            <div class="bg-black/40 p-2 text-center text-gray-500 text-xs">"Claim · Hit · Clean · Donate to Rise — No excuses."</div>
+        </div>
+    </div>
+
+    <!-- BATTLEFIELD MODAL -->
+    <div id="rulesModal" class="fixed inset-0 bg-black/85 backdrop-blur-lg z-[2000] flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <div class="max-w-lg w-full mx-4 bg-gradient-to-b from-gray-800 to-gray-950 rounded-2xl border-2 border-orange-500 shadow-2xl overflow-hidden transform scale-95 transition">
+            <div class="bg-gradient-to-r from-orange-600 to-red-600 p-4 flex justify-between items-center"><h2 class="text-xl font-bold flex items-center gap-2"><i class="fas fa-scroll"></i> BATTLEFIELD ORDERS</h2><button id="closeModalBtn" class="text-white text-2xl">&times;</button></div>
+            <div class="p-5"><div class="text-center text-4xl mb-2">🎺⚔️📜</div><p class="text-center font-semibold">Read carefully, soldier — these are final commands.</p>
+            <ul class="mt-4 space-y-3 text-sm">
+                <li class="flex gap-2"><i class="fas fa-hourglass-end text-red-400"></i> <strong>1 HOUR REMAINING?</strong> Clean non-3-star bases.</li>
+                <li class="flex gap-2"><i class="fas fa-exchange-alt text-purple-400"></i> <strong>Swap attack?</strong> ASK PERMISSION first.</li>
+                <li class="flex gap-2"><i class="fas fa-flag text-red-400"></i> Respect Red Flag & claims.</li>
+                <li class="flex gap-2"><i class="fas fa-moon text-blue-300"></i> Heroes asleep? Opt OUT before war.</li>
+                <li class="flex gap-2"><i class="fas fa-gift text-amber-400"></i> Season Donation Glory: highest donor promotion.</li>
+            </ul>
+            <div class="text-center italic text-gray-400 text-xs mt-5 border-t border-gray-700 pt-3">"Claim · Hit · Clean · Donate to Lead — Fight as one."</div>
+            <button id="confirmModalBtn" class="mt-5 w-full bg-orange-600 hover:bg-orange-500 py-2 rounded-full font-bold">✓ ACKNOWLEDGE & FIGHT ✓</button></div>
+        </div>
+    </div>
+
+    <script>
+        // ========== BIBLE VERSE API VIA PROXY (NO CORS) ==========
+        const bibleContentDiv = document.getElementById('bibleContent');
+        const PROXY_URL = 'http://localhost:3001/api/bible';
+        
+        async function fetchBibleVerse() {
+            bibleContentDiv.innerHTML = `<div class="flex flex-col items-center gap-3"><i class="fas fa-spinner fa-pulse text-3xl text-orange-400"></i><p class="text-gray-400">Loading scripture...</p></div>`;
+            try {
+                const response = await fetch(PROXY_URL);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const data = await response.json();
+                
+                // Handle different response structures from the Bible API
+                let verseText = "Trust in the Lord with all your heart";
+                let reference = "Proverbs 3:5";
+                let bookName = "";
+                
+                if (data && data.text && data.reference) {
+                    verseText = data.text;
+                    reference = data.reference;
+                    bookName = data.book || "";
+                } else if (data && data.verse && data.text) {
+                    verseText = data.text;
+                    reference = data.reference || data.verse;
+                } else if (data && typeof data === 'string') {
+                    verseText = data;
+                } else if (data && data.verses && data.verses[0]) {
+                    verseText = data.verses[0].text;
+                    reference = data.verses[0].reference;
+                }
+                
+                bibleContentDiv.innerHTML = `
+                    <div class="max-w-2xl mx-auto text-center">
+                        <i class="fas fa-quote-left text-amber-400/50 text-3xl mb-2 block"></i>
+                        <p class="text-xl md:text-2xl italic font-light leading-relaxed">“${verseText}”</p>
+                        <p class="mt-4 text-amber-300 font-semibold tracking-wide">— ${reference} ${bookName ? `(${bookName})` : ''}</p>
+                        <div class="mt-3 text-xs text-gray-400"><i class="fas fa-feather-alt"></i> Sacred wisdom for warriors</div>
+                    </div>
+                `;
+            } catch (err) {
+                console.error("Bible API proxy error:", err);
+                bibleContentDiv.innerHTML = `
+                    <div class="text-center">
+                        <i class="fas fa-scroll text-red-400 text-3xl mb-2"></i>
+                        <p class="text-gray-300">“I can do all things through Christ who strengthens me.”</p>
+                        <p class="text-amber-400 text-sm mt-1">— Philippians 4:13</p>
+                        <button id="retryBibleBtn" class="mt-3 text-xs bg-orange-600 hover:bg-orange-500 px-3 py-1 rounded-full transition"><i class="fas fa-redo-alt"></i> Retry Verse</button>
+                        <p class="text-gray-500 text-xs mt-2">⚠️ Make sure proxy server is running: <code class="bg-black/50 px-1 rounded">node server.js</code></p>
+                    </div>
+                `;
+                const retryBtn = document.getElementById('retryBibleBtn');
+                if (retryBtn) retryBtn.addEventListener('click', fetchBibleVerse);
+            }
+        }
+        
+        fetchBibleVerse();
+        document.getElementById('refreshBibleBtn')?.addEventListener('click', fetchBibleVerse);
+        
+        // ========== AUDIO & MODAL LOGIC (PRESERVED) ==========
+        const tutorialAudio = new Audio('tutorial.mp3');
+        const wartuneAudio = new Audio('wartune.mp3');
+        tutorialAudio.loop = false; tutorialAudio.volume = 0.5;
+        wartuneAudio.loop = true; wartuneAudio.volume = 0.35;
+        let isModalOpen = false, isWartunePlaying = false, wartuneStarted = false;
+        const nowPlayingSpan = document.getElementById('nowPlaying');
+        function updateNowPlaying(txt) { if(nowPlayingSpan) nowPlayingSpan.innerHTML = txt; }
+        function playWartune() { if(!wartuneStarted) wartuneStarted=true; if(!isWartunePlaying && !isModalOpen){ wartuneAudio.play().then(()=>{ isWartunePlaying=true; updateNowPlaying('🎵 wartune.mp3 (background)'); }).catch(()=> updateNowPlaying('⚠️ click to enable audio')); } }
+        function stopWartune(){ if(isWartunePlaying){ wartuneAudio.pause(); isWartunePlaying=false; updateNowPlaying('🔇 paused'); } }
+        function playTutorial(){ stopWartune(); tutorialAudio.currentTime=0; tutorialAudio.play().then(()=> updateNowPlaying('📢 tutorial.mp3 (battle orders)')).catch(()=> updateNowPlaying('⚠️ enable audio')); }
+        function stopTutorialAndPlayWartune(){ tutorialAudio.pause(); tutorialAudio.currentTime=0; if(!isModalOpen) playWartune(); }
+
+        // Welcome modal
+        const welcomeModalDiv = document.getElementById('welcomeModal');
+        const welcomeBtn = document.getElementById('welcomeConfirmBtn');
+        function closeWelcome(){ welcomeModalDiv.classList.add('opacity-0','invisible'); setTimeout(()=> { welcomeModalDiv.style.display='none'; playWartune(); }, 400); }
+        if(welcomeBtn) welcomeBtn.addEventListener('click', closeWelcome);
+
+        // Battlefield modal
+        const modalOverlay = document.getElementById('rulesModal');
+        const enterBtn = document.getElementById('enterBattleBtn');
+        const closeModal = document.getElementById('closeModalBtn');
+        const confirmModalBtn = document.getElementById('confirmModalBtn');
+        function openBattlefield(){ modalOverlay.classList.add('active','opacity-100','visible'); modalOverlay.classList.remove('opacity-0','invisible'); isModalOpen=true; stopWartune(); playTutorial(); }
+        function closeBattlefieldModal(){ modalOverlay.classList.remove('active','opacity-100','visible'); modalOverlay.classList.add('opacity-0','invisible'); isModalOpen=false; stopTutorialAndPlayWartune(); }
+        if(enterBtn) enterBtn.addEventListener('click', openBattlefield);
+        if(closeModal) closeModal.addEventListener('click', closeBattlefieldModal);
+        if(confirmModalBtn) confirmModalBtn.addEventListener('click', closeBattlefieldModal);
+        modalOverlay.addEventListener('click', (e) => { if(e.target === modalOverlay) closeBattlefieldModal(); });
+        function playWarHorn(){ try{ const AudioCtx=window.AudioContext||window.webkitAudioContext; if(AudioCtx){ const ctx=new AudioCtx(); const osc=ctx.createOscillator(); const gain=ctx.createGain(); osc.connect(gain); gain.connect(ctx.destination); osc.frequency.value=440; gain.gain.value=0.1; osc.start(); osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime+0.3); gain.gain.exponentialRampToValueAtTime(0.00001, ctx.currentTime+0.6); osc.stop(ctx.currentTime+0.6); ctx.resume(); } }catch(e){} }
+        if(enterBtn) enterBtn.addEventListener('click', playWarHorn);
+        updateNowPlaying('🎵 Nexus awaits — click Enter Battlefield');
+    </script>
+    <style>
+        .active { opacity: 1 !important; visibility: visible !important; }
+        .invisible { visibility: hidden; }
+        .opacity-0 { opacity: 0; }
+        .opacity-100 { opacity: 1; }
+        .visible { visibility: visible; }
+        #welcomeModal { transition: opacity 0.3s ease, visibility 0.3s; display: flex; }
+        #rulesModal { transition: opacity 0.25s ease, visibility 0.25s; }
+    </style>
+</body>
+</html>
